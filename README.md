@@ -1,17 +1,21 @@
 # Flowtriq WHMCS Module
 
-WHMCS provisioning module for [Flowtriq](https://flowtriq.com) DDoS detection and auto-mitigation.
+[![WHMCS 8.0+](https://img.shields.io/badge/WHMCS-8.0%2B-blue.svg)](https://www.whmcs.com/)
+[![PHP 7.4+](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://www.php.net/)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 
-Lets hosting providers sell DDoS protection as a WHMCS product with fully automated provisioning, suspension, and termination -- integrated with Flowtriq's white-label system so each customer gets their own isolated dashboard.
+WHMCS provisioning module for [Flowtriq](https://flowtriq.com) DDoS detection and auto-mitigation. Lets hosting providers sell DDoS protection as a WHMCS product with fully automated provisioning, suspension, and termination -- integrated with Flowtriq's white-label system so each customer gets their own isolated dashboard.
+
+---
 
 ## Features
 
-- **Automated provisioning** -- Creates a Flowtriq workspace + monitoring node when a customer orders
-- **White-label integration** -- Each customer gets their own branded dashboard with login credentials
-- **Billing lifecycle** -- Suspend, unsuspend, and terminate tied to WHMCS billing events
-- **Client area** -- Protection status, recent incidents, and agent install instructions
-- **Admin area** -- Node status, workspace details, and quick dashboard link
-- **Auto-setup** -- Required custom fields are created automatically when you configure a product
+- **Automated provisioning** -- creates a Flowtriq workspace + monitoring node when a customer orders
+- **White-label integration** -- each customer gets their own branded dashboard with login credentials
+- **Billing lifecycle** -- suspend, unsuspend, and terminate tied to WHMCS billing events
+- **Client area** -- protection status, recent incidents, and agent install instructions
+- **Admin area** -- node status, workspace details, and quick dashboard link
+- **Auto-setup** -- required custom fields are created automatically when you configure a product
 
 ## Requirements
 
@@ -21,18 +25,18 @@ Lets hosting providers sell DDoS protection as a WHMCS product with fully automa
 
 ## Installation
 
-1. Copy the `modules/servers/flowtriq/` directory into your WHMCS installation:
+1. Copy the module directory into your WHMCS installation:
 
-```
-cp -r modules/servers/flowtriq /path/to/whmcs/modules/servers/
-```
+   ```bash
+   cp -r modules/servers/flowtriq /path/to/whmcs/modules/servers/
+   ```
 
 2. In WHMCS Admin, go to **Setup > Products/Services > Products/Services**
 3. Create or edit a product and set the **Module** to **Flowtriq DDoS Protection**
 4. Configure the module settings:
-   - **API URL** -- Your Flowtriq instance URL (default: `https://flowtriq.com`)
-   - **Deploy Token** -- Your white-label workspace deploy token (found in Flowtriq > Settings > API)
-   - **Show Install Instructions** -- Whether to display agent setup steps to customers
+   - **API URL** -- your Flowtriq instance URL (default: `https://flowtriq.com`)
+   - **Deploy Token** -- your white-label workspace deploy token (found in **Flowtriq > Settings > API**)
+   - **Show Install Instructions** -- whether to display agent setup steps to customers
 5. Save the product. The required custom fields will be created automatically.
 
 ## How It Works
@@ -74,14 +78,14 @@ Customers see:
 
 ```
 modules/servers/flowtriq/
-├── flowtriq.php              # Main provisioning module
-├── hooks.php                 # Auto-creates custom fields
-├── logo.png                  # Module icon
-├── lib/
-│   └── FlowtriqApi.php       # Flowtriq REST API client
-└── templates/
-    ├── admin.tpl              # Admin service detail view
-    └── client.tpl             # Client area view
+  flowtriq.php              # Main provisioning module
+  hooks.php                 # Auto-creates custom fields
+  logo.png                  # Module icon
+  lib/
+    FlowtriqApi.php         # Flowtriq REST API client
+  templates/
+    admin.tpl               # Admin service detail view
+    client.tpl              # Client area view
 ```
 
 ## API Endpoints Used
