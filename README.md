@@ -86,7 +86,6 @@ modules/servers/flowtriq/
   lib/
     FlowtriqApi.php         # Flowtriq REST API client
   templates/
-    admin.tpl               # Admin service detail view
     client.tpl              # Client area view
 ```
 
