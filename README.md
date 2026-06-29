@@ -4,6 +4,8 @@
 [![PHP 7.4+](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://www.php.net/)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-lightgrey.svg)](LICENSE)
 
+> **[Integration Guide](https://flowtriq.com/integrations/whmcs)** | **[Documentation](https://flowtriq.com/docs)** | **[Sign Up](https://flowtriq.com/signup)**
+
 WHMCS provisioning module for [Flowtriq](https://flowtriq.com) DDoS detection and auto-mitigation. Lets hosting providers sell DDoS protection as a WHMCS product with fully automated provisioning, suspension, and termination -- integrated with Flowtriq's white-label system so each customer gets their own isolated dashboard.
 
 ---
@@ -108,6 +110,14 @@ The module communicates with the Flowtriq REST API v1:
 - [Flowtriq Dashboard](https://flowtriq.com/dashboard)
 - Email: support@flowtriq.com
 
+## Get Started
+
+Start your free 14-day trial at [flowtriq.com/signup](https://flowtriq.com/signup).
+
 ## License
 
 Proprietary. Copyright Flowtriq.
+
+---
+
+Built by [Flowtriq](https://flowtriq.com) - Real-time DDoS detection and mitigation.
