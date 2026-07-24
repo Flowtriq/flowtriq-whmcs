@@ -152,9 +152,13 @@
                 <p>Install the Flowtriq agent on your server to enable DDoS monitoring:</p>
 
                 <h5>1. Install the agent</h5>
-                <pre><code>pip install ftagent[full]</code></pre>
+                <pre><code># Recommended: one-line install
+curl -sSL https://flowtriq.com/install.sh | sudo bash
 
-                <h5>2. Run the setup wizard</h5>
+# Or install manually via pip:
+pip install ftagent[full]</code></pre>
+
+                <h5>2. Run the setup wizard (if installed via pip)</h5>
                 <pre><code>sudo ftagent --setup</code></pre>
 
                 <p>When prompted, enter the following credentials:</p>
